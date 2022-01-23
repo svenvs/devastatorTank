@@ -28,32 +28,32 @@ screen.keypad(True)
 try:
         while True:
             char = screen.getch()
-            print(char)
             if char == ord('q'):
                 break
             if char == ord('S'): # Added for shutdown on capital S
                 os.system ('sudo shutdown now') # shutdown right now!
-            elif char == "w":
+            elif char == ord("w"):
+                print("entered w")
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == "s":
+            elif char == ord("s"):
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == "d":
+            elif char == ord("d"):
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == "a":
+            elif char == ord("a"):
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == "r":
+            elif char == ord("r"):
                 GPIO.output(7,False)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
