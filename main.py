@@ -28,7 +28,7 @@ screen.keypad(True)
 try:
         while True:
             char = screen.getch()
-            print(char, flush=True)
+            print(char)
             if char == ord('q'):
                 break
             if char == ord('S'): # Added for shutdown on capital S
