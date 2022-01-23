@@ -33,27 +33,27 @@ try:
                 break
             if char == ord('S'): # Added for shutdown on capital S
                 os.system ('sudo shutdown now') # shutdown right now!
-            elif char == curses.KEY_UP:
+            elif char == "w":
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == curses.KEY_DOWN:
+            elif char == "s":
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == curses.KEY_RIGHT:
+            elif char == "d":
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == curses.KEY_LEFT:
+            elif char == "a":
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == 10:
+            elif char == "r":
                 GPIO.output(7,False)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
