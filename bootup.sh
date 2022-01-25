@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /home/pi/devastatorTank
-git checkout main
-git pull
-/usr/bin/python3 main.py
+git -C /home/pi/devastatorTank checkout main
+git -C /home/pi/devastatorTank pull
+/usr/bin/python3 /home/pi/devastatorTank/main.py
