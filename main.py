@@ -17,7 +17,7 @@ GPIO.setup(15,GPIO.OUT)
 GPIO.setup(29,GPIO.OUT)
 GPIO.setup(ledPin, GPIO.OUT)
 
-GPIO.output(ledPin, 1)
+GPIO.output(ledPin, True)
 
 for x in range(1, 10):
         GPIO.output(29,False)
