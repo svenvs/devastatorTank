@@ -1,5 +1,5 @@
 # devastatorTank
-
+bla just a change to see if auto pull works
 
 link for boot:
 https://raspberrypi-guide.github.io/programming/run-script-on-boot
