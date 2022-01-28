@@ -1,3 +1,7 @@
+#!/bin/python
+
+ledPin = 26
+
 # import curses and GPIO
 import curses
 import RPi.GPIO as GPIO
@@ -11,6 +15,9 @@ GPIO.setup(11,GPIO.OUT)
 GPIO.setup(13,GPIO.OUT)
 GPIO.setup(15,GPIO.OUT)
 GPIO.setup(29,GPIO.OUT)
+GPIO.setup(ledPin, GPIO.OUT)
+
+GPIO.output(ledPin, 1)
 
 for x in range(1, 10):
         GPIO.output(29,False)
