@@ -1,6 +1,6 @@
 #!/bin/python
 
-ledPin = 26
+ledPin = 37
 
 # import curses and GPIO
 import curses
