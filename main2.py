@@ -26,8 +26,8 @@ try:
         while True:
             if keyboard.is_pressed("q"):
                 break
-            if keyboard.is_pressed("S"): # Added for shutdown on capital S
-                os.system ('sudo shutdown now') # shutdown right now!
+            # if keyboard.is_pressed("S"): # Added for shutdown on capital S
+            #     os.system ('sudo shutdown now') # shutdown right now!
             elif keyboard.is_pressed("w"):
                 print("entered w")
                 GPIO.output(7,False)
