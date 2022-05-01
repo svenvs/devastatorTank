@@ -1,5 +1,7 @@
 # devastatorTank
-bla just a change to see if auto pull works
+
+## how to run
+`sudo python3 main.py`
 
 link for boot:
 https://raspberrypi-guide.github.io/programming/run-script-on-boot
