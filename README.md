@@ -1,7 +1,9 @@
 # devastatorTank
 
 ## how to run
-`sudo python3 main.py`
+- Go to directory `devastatorTank`
+- Ensure required packages are installed: `pip3 install -r requirements.txt`
+- Run command `sudo python3 main.py`
 
 link for boot:
 https://raspberrypi-guide.github.io/programming/run-script-on-boot
