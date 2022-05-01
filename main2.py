@@ -1,5 +1,4 @@
-
-import curses
+import keyboard
 import RPi.GPIO as GPIO
 import os
 import time
@@ -23,50 +22,39 @@ for x in range(1, 10):
         GPIO.output(29,True)
         time.sleep(1)
 
-# Get the curses window, turn off echoing of keyboard to screen, turn on
-# instant (no waiting) key response, and use special values for cursor keys
-screen = curses.initscr()
-curses.noecho() 
-curses.cbreak()
-screen.keypad(True)
-
 try:
         while True:
-            char = screen.getch()
-            if char == ord('q'):
+            if keyboard.is_pressed("q"):
                 break
-            if char == ord('S'): # Added for shutdown on capital S
+            if keyboard.is_pressed("S"): # Added for shutdown on capital S
                 os.system ('sudo shutdown now') # shutdown right now!
-            elif char == ord("w"):
+            elif keyboard.is_pressed("w"):
                 print("entered w")
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == ord("s"):
+            elif keyboard.is_pressed("s"):
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == ord("d"):
+            elif keyboard.is_pressed("d"):
                 GPIO.output(7,True)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,True)
-            elif char == ord("a"):
+            elif keyboard.is_pressed("a"):
                 GPIO.output(7,False)
                 GPIO.output(11,True)
                 GPIO.output(13,True)
                 GPIO.output(15,False)
-            elif char == ord("r"):
+            elif keyboard.is_pressed("r"):
                 GPIO.output(7,False)
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,False)
              
 finally:
-    #Close down curses properly, inc turn echo back on!
-    curses.nocbreak(); screen.keypad(0); curses.echo()
-    curses.endwin()
     GPIO.cleanup()
     
