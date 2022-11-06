@@ -13,3 +13,14 @@ bash -c '/usr/bin/python3 /home/pi/devastatorTank/main.py > /home/pi/mylog.log 2
 
 ## Handy links
 - [A guide for headless configuration of Raspberry Pi](https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html)
+
+## TODO 
+
+- Willie automatische switch van de Motor controller via relais
+- snelheidpulses
+- fastapi server
+- xbox controller
+- status lampjes
+- cameratje
+- gun :P
+- AI die shit gaat herkennen
