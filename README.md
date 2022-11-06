@@ -1,5 +1,10 @@
 # devastatorTank
 
+## connect to pi
+- Look up your device using LanScan
+- `ssh pi@xxx.xxx.x.xxx`
+- enter password
+
 ## how to run
 - Go to directory `devastatorTank`
 - Ensure required packages are installed: `pip3 install -r requirements.txt`
