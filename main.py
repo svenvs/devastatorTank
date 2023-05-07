@@ -24,7 +24,7 @@ GPIO.setup(32,GPIO.OUT)
 speedleft = GPIO.PWM(12,100)
 speedright = GPIO.PWM(32,100)
 speedleft.start(100)
-speedright.start(5)
+speedright.start(25)
 
 for x in range(1, 10):
         GPIO.output(29,False)
