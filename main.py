@@ -3,7 +3,6 @@ import curses
 import RPi.GPIO as GPIO
 import os
 import time
-import machine
 
 ledPin = 37
 
