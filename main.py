@@ -17,6 +17,15 @@ GPIO.setup(ledPin, GPIO.OUT)
 
 GPIO.output(ledPin, True)
 
+
+#setup PWM control
+GPIO.setup(12,GPIO.OUT)
+GPIO.setup(32,GPIO.OUT)
+speedleft = GPIO.PWM(12,100)
+speedright = GPIO.PWM(32,100)
+speedleft.start(100)
+speedright.start(100)
+
 for x in range(1, 10):
         GPIO.output(29,False)
         time.sleep(.5)
