@@ -72,7 +72,16 @@ try:
                 GPIO.output(11,False)
                 GPIO.output(13,False)
                 GPIO.output(15,False)
-             
+            elif char == ord("1"):
+                speedleft.ChangeDutyCycle(33)
+                speedright.ChangeDutyCycle(33)
+            elif char == ord("2"):
+                speedleft.ChangeDutyCycle(66)
+                speedright.ChangeDutyCycle(66)
+            elif char == ord("3"):
+                speedleft.ChangeDutyCycle(100)
+                speedright.ChangeDutyCycle(100)
+
 finally:
     #Close down curses properly, inc turn echo back on!
     curses.nocbreak(); screen.keypad(0); curses.echo()
